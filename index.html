@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>pluie soleil neige</title>
+        </head>
+        <body>
+        <h1> Pluie Soleil Eau </h1>
+
+        <div id="meteo" onclick="imageMeteo('chiot');"></div>
+
+        <div id="appuyer">
+            <button type="button" class="bouton" onclick="changerMeteo('soleil');">soleil</button>
+            <button type="button" class="bouton" onclick="changerMeteo('pluie');">pluie</button>
+            <button type="button" class="bouton" onclick="changerMeteo('neige');">neige</button>
+        </div>
+
+
+
+        <style>
+
+            body{
+                background-color: powderblue;
+            }
+            h1{
+                color: #19008b;
+                text-align: center;
+                font-family: "Abyssinica SIL";
+                text-shadow: 1px 2px 2px #00ffe1, 0 0 1em #0069ff, 0 0 0.2em #7b00d9;
+                background-color: #053132;
+                box-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;;
+            }
+            #appuyer{
+                text-align: center;
+                ;
+            }
+
+
+            #meteo{
+                text-align:center;
+                height:500px;
+                background-image: url("image-spl/chiot.jpg");
+                background-position:center;
+                border-radius:20px;
+                background-repeat:no-repeat;
+            }
+        </style>
+
+        <script>
+        function changerMeteo(meteo) {
+            console.log(meteo)
+            document.getElementById('meteo').style.backgroundImage = "url('image-spl/"+meteo+".jpg')";
+
+        }
+
+
+
+        </script>
+</body>
+</html>
